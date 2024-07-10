@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['accident']
+
+roboflow:
+  workspace: accidentdetection-swaec
+  project: accident-detection-ava9z
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/accidentdetection-swaec/accident-detection-ava9z/dataset/1
