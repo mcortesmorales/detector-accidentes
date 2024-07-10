@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Train Model') {
+            steps {
+                sh 'python train.py'
+            }
+        }
+        stage('Validate Model') {
+            steps {
+                sh 'python validate.py'
+            }
+        }
+        stage('Deploy Model') {
+            steps {
+                sh 'python deploy.py'
+            }
+        }
+    }
+}
